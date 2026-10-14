@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dhmmlqnos0d8n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uunli"]
+size = Vector2(56, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fh211"]
+size = Vector2(8, 66)
+
+[node name="Ship" type="Area2D" unique_id=1974564266]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1800635465]
+shape = SubResource("RectangleShape2D_uunli")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=391183819]
+position = Vector2(-15, -17)
+shape = SubResource("RectangleShape2D_fh211")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=153084766]
+position = Vector2(14, -17)
+shape = SubResource("RectangleShape2D_fh211")

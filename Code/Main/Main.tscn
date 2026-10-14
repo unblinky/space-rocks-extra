@@ -1,6 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://b43n0f8g2tfgg"]
+[gd_scene format=3 uid="uid://b43n0f8g2tfgg"]
 
 [ext_resource type="Script" uid="uid://cgke8bpq05cbs" path="res://Main/Main.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://duiesnqf505sd" path="res://Rock/Rock.tscn" id="2_83ytx"]
+[ext_resource type="PackedScene" uid="uid://s2abnxf5ptfw" path="res://PlayerUI/PlayerUI.tscn" id="2_u2i7p"]
+[ext_resource type="PackedScene" uid="uid://dhmmlqnos0d8n" path="res://Ship/Ship.tscn" id="3_amygn"]
+[ext_resource type="PackedScene" uid="uid://biehskg2qpme5" path="res://UFO/UFO.tscn" id="4_ps1la"]
+[ext_resource type="PackedScene" uid="uid://db3otv5j2cbxb" path="res://Bullet/Bullet.tscn" id="5_6aewd"]
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" unique_id=1746539876]
 script = ExtResource("1")
+
+[node name="PlayerUI" parent="." unique_id=907809505 instance=ExtResource("2_u2i7p")]
+
+[node name="Rock" parent="." unique_id=1293001296 instance=ExtResource("2_83ytx")]
+position = Vector2(231, 357)
+
+[node name="Ship" parent="." unique_id=1974564266 instance=ExtResource("3_amygn")]
+position = Vector2(428, 360)
+
+[node name="UFO" parent="." unique_id=1333566402 instance=ExtResource("4_ps1la")]
+position = Vector2(662, 376)
+
+[node name="Bullet" parent="." unique_id=1237805751 instance=ExtResource("5_6aewd")]
+position = Vector2(425, 256)

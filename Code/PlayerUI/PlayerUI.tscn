@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://s2abnxf5ptfw"]
+
+[ext_resource type="Texture2D" uid="uid://cmp8dhqeo5lyx" path="res://Main/icon.png" id="1_7o3gy"]
+
+[node name="PlayerUI" type="PanelContainer" unique_id=907809505]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 305.0
+offset_top = 45.0
+offset_right = -394.0
+offset_bottom = -468.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="." unique_id=1600697866]
+layout_mode = 2
+
+[node name="ScoreUI" type="Label" parent="VBox" unique_id=1801972243]
+layout_mode = 2
+text = "0123456789"
+
+[node name="HBox" type="HBoxContainer" parent="VBox" unique_id=1874188202]
+layout_mode = 2
+
+[node name="Life" type="TextureRect" parent="VBox/HBox" unique_id=2095464865]
+layout_mode = 2
+texture = ExtResource("1_7o3gy")
+
+[node name="Life2" type="TextureRect" parent="VBox/HBox" unique_id=643587783]
+layout_mode = 2
+texture = ExtResource("1_7o3gy")
+
+[node name="Life3" type="TextureRect" parent="VBox/HBox" unique_id=1331249095]
+layout_mode = 2
+texture = ExtResource("1_7o3gy")
+
+[node name="Life4" type="TextureRect" parent="VBox/HBox" unique_id=1172566986]
+layout_mode = 2
+texture = ExtResource("1_7o3gy")
+
+[node name="Life5" type="TextureRect" parent="VBox/HBox" unique_id=81809520]
+layout_mode = 2
+texture = ExtResource("1_7o3gy")
+
+[node name="Life6" type="TextureRect" parent="VBox/HBox" unique_id=1563604730]
+layout_mode = 2
+texture = ExtResource("1_7o3gy")

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://db3otv5j2cbxb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fh211"]
+radius = 5.0
+
+[node name="Bullet" type="Area2D" unique_id=1237805751]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1296683803]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_fh211")
