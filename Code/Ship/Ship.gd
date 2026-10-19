@@ -22,6 +22,9 @@ func _process(delta: float) -> void:
 		velocity.x += cos(rotation - PI / 2) * thrust_power
 		velocity.y += sin(rotation - PI / 2) * thrust_power
 	
+	# TODO: Fix max velocity.
+	#var c: float = 1000
+	#velocity = velocity.clamp(Vector2(-c, c), Vector2(-c, c))
 	position += velocity * delta
 	super._process(delta)
 	
