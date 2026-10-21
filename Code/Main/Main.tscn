@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://duiesnqf505sd" path="res://Rock/Rock.tscn" id="2_83ytx"]
 [ext_resource type="PackedScene" uid="uid://s2abnxf5ptfw" path="res://PlayerUI/PlayerUI.tscn" id="2_u2i7p"]
 [ext_resource type="PackedScene" uid="uid://dhmmlqnos0d8n" path="res://Ship/Ship.tscn" id="3_amygn"]
-[ext_resource type="PackedScene" uid="uid://biehskg2qpme5" path="res://UFO/UFO.tscn" id="4_ps1la"]
 [ext_resource type="PackedScene" uid="uid://db3otv5j2cbxb" path="res://Bullet/Bullet.tscn" id="5_6aewd"]
 
 [node name="Main" type="Node" unique_id=1746539876]
@@ -17,9 +16,6 @@ position = Vector2(772, 267)
 
 [node name="Ship" parent="." unique_id=1974564266 instance=ExtResource("3_amygn")]
 position = Vector2(552, 262)
-
-[node name="UFO" parent="." unique_id=1333566402 instance=ExtResource("4_ps1la")]
-position = Vector2(662, 376)
 
 [node name="Bullet" parent="." unique_id=1237805751 instance=ExtResource("5_6aewd")]
 position = Vector2(425, 256)
@@ -35,3 +31,7 @@ position = Vector2(521, 405)
 
 [node name="Rock5" parent="." unique_id=921550742 instance=ExtResource("2_83ytx")]
 position = Vector2(913, 164)
+
+[node name="UfoTimer" type="Timer" parent="." unique_id=943949138]
+wait_time = 10.0
+autostart = true

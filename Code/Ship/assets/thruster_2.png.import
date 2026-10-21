@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8d00xuo5h25y"
-path="res://.godot/imported/ship.png-8c4bc5e57e365fcfaea8614bae66e641.ctex"
+uid="uid://ce1qlhh88723a"
+path="res://.godot/imported/thruster_2.png-3e12ce9fd2b573f1b2579ad91592ff78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rock/assets/ship.png"
-dest_files=["res://.godot/imported/ship.png-8c4bc5e57e365fcfaea8614bae66e641.ctex"]
+source_file="res://Ship/assets/thruster_2.png"
+dest_files=["res://.godot/imported/thruster_2.png-3e12ce9fd2b573f1b2579ad91592ff78.ctex"]
 
 [params]
 

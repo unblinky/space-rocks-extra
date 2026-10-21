@@ -27,10 +27,6 @@ func _process(delta: float) -> void:
 	#velocity = velocity.clamp(Vector2(-c, c), Vector2(-c, c))
 	position += velocity * delta
 	super._process(delta)
-	
-	# TODO: Move to Main?
-	#if Input.is_action_pressed("pause"):
-		#get_tree().paused = true
 
 func fire():
 	print("Fire!")
