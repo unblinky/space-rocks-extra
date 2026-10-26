@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 		#get_tree().paused = true
 		get_tree().quit()
 
+
 # TODO: implement multi-player.
 func just_score(delta_score, player):
 	players[0].update_score(delta_score)
