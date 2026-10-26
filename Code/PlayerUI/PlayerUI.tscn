@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://s2abnxf5ptfw"]
 
+[ext_resource type="Script" uid="uid://bi3eyqu3dc678" path="res://PlayerUI/PlayerUi.gd" id="1_4n4wi"]
 [ext_resource type="Texture2D" uid="uid://cmp8dhqeo5lyx" path="res://Main/icon.png" id="1_7o3gy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4n4wi"]
@@ -24,6 +25,7 @@ offset_right = 62.0
 offset_bottom = 79.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_4n4wi")
+script = ExtResource("1_4n4wi")
 
 [node name="VBox" type="VBoxContainer" parent="." unique_id=1600697866]
 layout_mode = 2
