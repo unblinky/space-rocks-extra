@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bovuvgb2fysqb"]
+
+[ext_resource type="Texture2D" uid="uid://cmp8dhqeo5lyx" path="res://Main/icon.png" id="1_lbaia"]
+
+[node name="Life" type="TextureRect" unique_id=721099552]
+custom_minimum_size = Vector2(32, 32)
+texture = ExtResource("1_lbaia")
+expand_mode = 1

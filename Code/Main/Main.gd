@@ -13,6 +13,10 @@ func _process(delta: float) -> void:
 		#get_tree().paused = true
 		get_tree().quit()
 
+# TODO: Fix this.
+func spawn_rocks(rock_count):
+	pass
+
 func on_ufo_spawned():
 	var ufo: UFO = UfO.instantiate()
 	if randi() % 2:

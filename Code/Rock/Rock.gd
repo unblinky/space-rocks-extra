@@ -3,6 +3,8 @@ class_name Rock
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+var main: Main
+
 var speed: float = 100 # px / sec
 var direction: Vector2 = Vector2.ZERO
 var velocity: Vector2 = Vector2.ZERO

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://s2abnxf5ptfw"]
 
 [ext_resource type="Script" uid="uid://bi3eyqu3dc678" path="res://PlayerUI/PlayerUi.gd" id="1_4n4wi"]
-[ext_resource type="Texture2D" uid="uid://cmp8dhqeo5lyx" path="res://Main/icon.png" id="1_7o3gy"]
+[ext_resource type="PackedScene" uid="uid://bovuvgb2fysqb" path="res://PlayerUI/assets/life.tscn" id="2_4n4wi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4n4wi"]
 content_margin_left = 10.0
@@ -35,23 +35,11 @@ layout_mode = 2
 text = "0123456789"
 label_settings = SubResource("LabelSettings_7o3gy")
 
-[node name="HBox" type="HBoxContainer" parent="VBox" unique_id=1874188202]
+[node name="LivesUI" type="HBoxContainer" parent="VBox" unique_id=1874188202]
 layout_mode = 2
 
-[node name="Life" type="TextureRect" parent="VBox/HBox" unique_id=2095464865]
-custom_minimum_size = Vector2(32, 32)
+[node name="Life" parent="VBox/LivesUI" unique_id=721099552 instance=ExtResource("2_4n4wi")]
 layout_mode = 2
-texture = ExtResource("1_7o3gy")
-expand_mode = 1
 
-[node name="Life2" type="TextureRect" parent="VBox/HBox" unique_id=643587783]
-custom_minimum_size = Vector2(32, 32)
+[node name="Life2" parent="VBox/LivesUI" unique_id=1093409358 instance=ExtResource("2_4n4wi")]
 layout_mode = 2
-texture = ExtResource("1_7o3gy")
-expand_mode = 1
-
-[node name="Life6" type="TextureRect" parent="VBox/HBox" unique_id=1563604730]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-texture = ExtResource("1_7o3gy")
-expand_mode = 1
