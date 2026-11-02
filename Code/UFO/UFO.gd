@@ -41,4 +41,3 @@ func on_timeout():
 			velocity_y = -speed
 		else:
 			velocity_y = speed
-	print("It's going!")
