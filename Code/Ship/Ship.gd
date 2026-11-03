@@ -3,6 +3,8 @@ class_name Ship
 
 const BULLET = preload("res://Bullet/Bullet.tscn")
 
+
+
 var player: PlayerUI
 
 var turn_speed: float = 180 # degrees / sec.
@@ -32,7 +34,7 @@ func _process(delta: float) -> void:
 
 func fire():
 	print("Fire!")
-	var bullet: Bullet = BULLET.instantiate()
+	var bullet = 
 	bullet.player = player
 	bullet.position = position
 	bullet.rotation = rotation

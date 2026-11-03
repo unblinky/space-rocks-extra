@@ -1,6 +1,10 @@
 extends ScreenWrapper
 class_name Rock
 
+# Save for later: self.call_deferred("queue_free")
+# queue_free.call_deferred()
+
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var main: Main

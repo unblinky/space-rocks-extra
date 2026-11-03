@@ -7,6 +7,7 @@
 script = ExtResource("1")
 
 [node name="UfoTimer" type="Timer" parent="." unique_id=943949138]
-autostart = true
 
 [node name="PauseMenu" parent="." unique_id=1938648503 instance=ExtResource("2_83ytx")]
+offset_top = -106.0
+offset_bottom = 38.0

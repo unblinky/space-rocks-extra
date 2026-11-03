@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dhgysl2eds6sy"]
 
 [ext_resource type="Script" uid="uid://dd0cix7datup6" path="res://Main/PauseMenu/PauseMenu.gd" id="1_86arr"]
+[ext_resource type="FontFile" uid="uid://1m54fulxg0ml" path="res://Fonts/Limelight/Limelight-Regular.ttf" id="2_coij2"]
+[ext_resource type="FontFile" uid="uid://d3m6s6ewolmns" path="res://Fonts/UnifrakturMaguntia/UnifrakturMaguntia-Regular.ttf" id="3_cv6wi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uunli"]
 content_margin_left = 12.0
@@ -10,6 +12,8 @@ content_margin_bottom = 12.0
 bg_color = Color(0.30359817, 0.6632548, 0.69452107, 1)
 
 [node name="PauseMenu" type="PanelContainer" unique_id=1938648503]
+process_mode = 3
+z_index = 50
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -29,8 +33,16 @@ layout_mode = 2
 
 [node name="PlayButton" type="Button" parent="VBox" unique_id=803898173]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_coij2")
+theme_override_font_sizes/font_size = 22
 text = "Play"
+
+[node name="ContinueButton" type="Button" parent="VBox" unique_id=1173022196]
+layout_mode = 2
+text = "Continue"
 
 [node name="QuitButton" type="Button" parent="VBox" unique_id=308666584]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_cv6wi")
+theme_override_font_sizes/font_size = 35
 text = "Quit"

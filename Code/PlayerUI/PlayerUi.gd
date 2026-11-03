@@ -39,4 +39,4 @@ func build_lives():
 func spawn_ship():
 	var ship = SHIP.instantiate()
 	ship.player = self
-	add_child(ship)
+	get_parent().add_child(ship)
