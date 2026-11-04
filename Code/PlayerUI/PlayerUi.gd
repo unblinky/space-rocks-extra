@@ -7,6 +7,8 @@ const SHIP = preload("res://Ship/Ship.tscn")
 @onready var score_ui: Label = $VBox/ScoreUI
 @onready var lives_ui: HBoxContainer = $VBox/LivesUI
 
+var current_ship: Ship = null
+
 var score: int = 0
 var lives: int = 3
 
@@ -37,6 +39,9 @@ func build_lives():
 		lives_ui.add_child(life)
 
 func spawn_ship():
-	var ship = SHIP.instantiate()
-	ship.player = self
-	get_parent().add_child(ship)
+	if current_ship == null:
+		var ship = SHIP.instantiate()
+		ship.player = self
+		ship.position = get_viewport().size / 2
+		get_parent().add_child(ship)
+		current_ship = ship

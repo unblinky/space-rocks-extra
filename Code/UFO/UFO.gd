@@ -1,7 +1,9 @@
 extends Area2D
 class_name UFO
 
+const BULL = preload("res://Bullet/Bull.tscn")
 const BULLET = preload("res://Bullet/Bullet.tscn")
+
 @onready var timer: Timer = $Timer
 @onready var fire_timer: Timer = $FireTimer
 
@@ -27,7 +29,7 @@ func _process(delta: float) -> void:
 		position.y = 0
 
 func on_fired():
-	var bullet: Bullet = BULLET.instantiate()
+	var bullet: Bullet = BULL.instantiate()
 	bullet.position = position
 	bullet.rotation_degrees = randf_range(0.0, 360.0)
 	get_parent().add_child(bullet)

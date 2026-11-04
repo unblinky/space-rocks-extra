@@ -32,3 +32,6 @@ func on_area_entered(other_area: Area2D):
 		other_area.queue_free()
 		queue_free()
 	
+	if other_area is Ship:
+		other_area.destroy()
+		queue_free()

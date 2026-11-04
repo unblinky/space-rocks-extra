@@ -1,9 +1,7 @@
 extends ScreenWrapper
 class_name Ship
 
-const BULLET = preload("res://Bullet/Bullet.tscn")
-
-
+const BULLET = preload("res://Bullet/Bull.tscn")
 
 var player: PlayerUI
 
@@ -12,8 +10,9 @@ var thrust_power: float = 10 # multipier. px / sec?
 var velocity: Vector2 = Vector2.ZERO
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("fire"):
-		fire()
+	# FIXME: Fire crashes for mysterious reasons.
+	#if Input.is_action_just_pressed("fire"):
+		#fire()
 	
 	if Input.is_action_pressed("turn_ccw"):
 		rotation_degrees -= turn_speed * delta
@@ -34,8 +33,12 @@ func _process(delta: float) -> void:
 
 func fire():
 	print("Fire!")
-	var bullet = 
-	bullet.player = player
-	bullet.position = position
-	bullet.rotation = rotation
-	get_parent().add_child(bullet)
+	var bull = BULLET.instantiate()
+	bull.player = player
+	bull.position = position
+	bull.rotation = rotation
+	get_parent().add_child(bull)
+
+func destroy():
+	player.current_ship = null
+	queue_free()

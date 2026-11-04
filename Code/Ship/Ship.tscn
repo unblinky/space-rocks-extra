@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dhmmlqnos0d8n"]
 
 [ext_resource type="Script" uid="uid://dansvaa3darfj" path="res://Ship/Ship.gd" id="1_11244"]
+[ext_resource type="Texture2D" uid="uid://c8d00xuo5h25y" path="res://Ship/assets/ship.png" id="2_2s2wp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uunli"]
 size = Vector2(56, 20)
@@ -21,3 +22,9 @@ shape = SubResource("RectangleShape2D_fh211")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=153084766]
 position = Vector2(14, -17)
 shape = SubResource("RectangleShape2D_fh211")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1007322188]
+texture_filter = 1
+position = Vector2(0, -22)
+scale = Vector2(2.6875, 2.6875)
+texture = ExtResource("2_2s2wp")
