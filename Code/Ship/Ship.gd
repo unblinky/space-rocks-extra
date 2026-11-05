@@ -42,3 +42,4 @@ func fire():
 func destroy():
 	player.current_ship = null
 	queue_free.call_deferred()
+	player.check_game_over()

@@ -7,18 +7,20 @@ const SHIP = preload("res://Ship/Ship.tscn")
 @onready var score_ui: Label = $VBox/ScoreUI
 @onready var lives_ui: HBoxContainer = $VBox/LivesUI
 
-var current_ship: Ship = null
+var main: Main
 
+var current_ship: Ship = null
 var score: int = 0
-var lives: int = 3
+var lives: int = 0
 
 func _ready() -> void:
 	update_score(1)
-	update_lives(3) # 6
+	update_lives(2) # 6
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("launch_ship"):
 		spawn_ship()
+		
 
 func update_score(delta_score):
 	score += delta_score
@@ -45,3 +47,8 @@ func spawn_ship():
 		ship.position = get_viewport().size / 2
 		get_parent().add_child(ship)
 		current_ship = ship
+		update_lives(-1)
+
+func check_game_over():
+	if lives <= 0 and current_ship == null:
+		main.pause_menu.show()
