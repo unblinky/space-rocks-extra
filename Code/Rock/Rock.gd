@@ -1,6 +1,8 @@
 extends ScreenWrapper
 class_name Rock
 
+const ROCK = preload("res://Rock/Rock.tscn")
+
 # Save for later: self.call_deferred("queue_free")
 # queue_free.call_deferred()
 
@@ -24,6 +26,18 @@ func _process(delta: float) -> void:
 	position += velocity
 	super._process(delta)
 
+func split():
+	if scale.x > 0.25:
+		# Spawn 2 new rocks.
+		for i in 2:
+			var rock: Rock = ROCK.instantiate()
+			rock.position = position
+			rock.scale = scale * 0.5
+			get_parent().add_child.call_deferred(rock)
+	
+	# Delete current rock.
+	queue_free()
+
 ## Collision function.
 func on_area_entered(other_area: Area2D):
 	if other_area is Bullet:
@@ -34,4 +48,4 @@ func on_area_entered(other_area: Area2D):
 	
 	if other_area is Ship:
 		other_area.destroy()
-		queue_free()
+		split()
