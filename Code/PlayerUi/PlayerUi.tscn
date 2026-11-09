@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://s2abnxf5ptfw"]
 
-[ext_resource type="Script" uid="uid://bi3eyqu3dc678" path="res://PlayerUI/PlayerUi.gd" id="1_4n4wi"]
-[ext_resource type="PackedScene" uid="uid://bovuvgb2fysqb" path="res://PlayerUI/assets/life.tscn" id="2_4n4wi"]
+[ext_resource type="Script" uid="uid://bi3eyqu3dc678" path="res://PlayerUi/PlayerUi.gd" id="1_d52r5"]
+[ext_resource type="PackedScene" uid="uid://bovuvgb2fysqb" path="res://PlayerUi/assets/life.tscn" id="2_hwjjo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4n4wi"]
 content_margin_left = 10.0
@@ -16,7 +16,7 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="LabelSettings" id="LabelSettings_7o3gy"]
 
-[node name="PlayerUI" type="PanelContainer" unique_id=907809505]
+[node name="PlayerUi" type="PanelContainer" unique_id=907809505]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -25,7 +25,7 @@ offset_right = 62.0
 offset_bottom = 79.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_4n4wi")
-script = ExtResource("1_4n4wi")
+script = ExtResource("1_d52r5")
 
 [node name="VBox" type="VBoxContainer" parent="." unique_id=1600697866]
 layout_mode = 2
@@ -38,8 +38,11 @@ label_settings = SubResource("LabelSettings_7o3gy")
 [node name="LivesUI" type="HBoxContainer" parent="VBox" unique_id=1874188202]
 layout_mode = 2
 
-[node name="Life" parent="VBox/LivesUI" unique_id=721099552 instance=ExtResource("2_4n4wi")]
+[node name="Life" parent="VBox/LivesUI" unique_id=721099552 instance=ExtResource("2_hwjjo")]
 layout_mode = 2
 
-[node name="Life2" parent="VBox/LivesUI" unique_id=1093409358 instance=ExtResource("2_4n4wi")]
+[node name="Life2" parent="VBox/LivesUI" unique_id=2051428487 instance=ExtResource("2_hwjjo")]
+layout_mode = 2
+
+[node name="Life3" parent="VBox/LivesUI" unique_id=1585173856 instance=ExtResource("2_hwjjo")]
 layout_mode = 2

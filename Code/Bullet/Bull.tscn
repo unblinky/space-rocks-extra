@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://denytv31avyy2"]
 
-[ext_resource type="Script" uid="uid://tj5f5k3bop43" path="res://Bullet/Bullet.gd" id="1_3wpjb"]
+[ext_resource type="Script" uid="uid://pavlv33kc784" path="res://Bullet/Bull.gd" id="1_3wpjb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fh211"]
 

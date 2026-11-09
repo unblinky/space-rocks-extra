@@ -3,12 +3,12 @@ class_name Main
 
 const UfO = preload("res://UFO/UFO.tscn")
 const ROCK = preload("res://Rock/Rock.tscn")
-const PLAYER_UI = preload("res://PlayerUI/PlayerUI.tscn")
+const PLAYER_UI = preload("res://PlayerUi/PlayerUi.tscn")
 
 @onready var pause_menu: PauseMenu = $PauseMenu
 @onready var ufo_timer: Timer = $UfoTimer
 
-var players: Array[PlayerUI]
+var players: Array[PlayerUi]
 var rock_count: int = 3
 
 func _ready() -> void:

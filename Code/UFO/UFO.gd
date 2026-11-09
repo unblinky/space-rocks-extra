@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 		position.y = 0
 
 func on_fired():
-	var bullet: Bullet = BULL.instantiate()
+	var bullet: Bull = BULL.instantiate()
 	bullet.position = position
 	bullet.rotation_degrees = randf_range(0.0, 360.0)
 	get_parent().add_child(bullet)
