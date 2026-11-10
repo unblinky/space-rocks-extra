@@ -11,8 +11,8 @@ var velocity: Vector2 = Vector2.ZERO
 
 func _process(delta: float) -> void:
 	# FIXME: Fire crashes for mysterious reasons.
-	#if Input.is_action_just_pressed("fire"):
-		#fire()
+	if Input.is_action_just_pressed("fire"):
+		fire()
 	
 	if Input.is_action_pressed("turn_ccw"):
 		rotation_degrees -= turn_speed * delta
@@ -33,11 +33,11 @@ func _process(delta: float) -> void:
 
 func fire():
 	print("Fire!")
-	var bull = BULLET.instantiate()
-	bull.player = player
-	bull.position = position
-	bull.rotation = rotation
-	get_parent().add_child(bull)
+	var bullet = BULLET.instantiate()
+	bullet.player = player
+	bullet.position = position
+	bullet.rotation = rotation
+	get_parent().add_child(bullet)
 
 func destroy():
 	player.current_ship = null

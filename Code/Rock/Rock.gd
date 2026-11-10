@@ -30,22 +30,29 @@ func split():
 	if scale.x > 0.25:
 		# Spawn 2 new rocks.
 		for i in 2:
+			# TODO: Code Dupe. minor.
 			var rock: Rock = ROCK.instantiate()
+			rock.main = self.main
 			rock.position = position
 			rock.scale = scale * 0.5
 			get_parent().add_child.call_deferred(rock)
+			main.rocks.append(rock)
 	
 	# Delete current rock.
+	main.rocks.erase(self)
 	queue_free()
+
 
 ## Collision function.
 func on_area_entered(other_area: Area2D):
 	if other_area is Bullet:
 		if other_area.player != null:
+			split()
 			main.just_score(1, other_area.player)
 		other_area.queue_free()
-		queue_free()
 	
 	if other_area is Ship:
 		other_area.destroy()
 		split()
+
+	main.check_round_over()

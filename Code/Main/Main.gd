@@ -9,7 +9,8 @@ const PLAYER_UI = preload("res://PlayerUI/PlayerUI.tscn")
 @onready var ufo_timer: Timer = $UfoTimer
 
 var players: Array[PlayerUI]
-var rock_count: int = 3
+var rock_count: int = 1
+var rocks: Array[Rock]
 
 func _ready() -> void:
 	ufo_timer.timeout.connect(on_ufo_spawned)
@@ -34,7 +35,8 @@ func spawn_rocks():
 	for r in rock_count:
 		var rock = ROCK.instantiate()
 		rock.main = self
-		add_child(rock)
+		add_child.call_deferred(rock)
+		rocks.append(rock)
 
 ## Callback for UFO timer.
 func on_ufo_spawned():
@@ -48,8 +50,10 @@ func on_ufo_spawned():
 	add_child(ufo)
 
 
-func start_new_round():
-	pass
+func next_round():
+	rock_count += 1
+	spawn_rocks()
 
-func game_over():
-	pass
+func check_round_over():
+	if rocks.size() <= 0:
+		next_round()

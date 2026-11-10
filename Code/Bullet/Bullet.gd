@@ -1,6 +1,8 @@
 extends ScreenWrapper
 class_name Bullet
 
+## TODO: [ ] Set this explicitly in the next version.
+##       Curnently fixes the bullet crash.
 var player
 
 var speed: float = 600.0 # px / sec.

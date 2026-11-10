@@ -51,4 +51,7 @@ func spawn_ship():
 
 func check_game_over():
 	if lives <= 0 and current_ship == null:
+		main.pause_menu.play_button.hide()
+		main.pause_menu.play_again_button.show()
+		main.pause_menu.continue_button.hide()
 		main.pause_menu.show()

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bovuvgb2fysqb"]
 
-[ext_resource type="Texture2D" uid="uid://cmp8dhqeo5lyx" path="res://Main/icon.png" id="1_lbaia"]
+[ext_resource type="Texture2D" uid="uid://c8d00xuo5h25y" path="res://Ship/assets/ship.png" id="1_lbaia"]
 
 [node name="Life" type="TextureRect" unique_id=721099552]
 custom_minimum_size = Vector2(32, 32)
